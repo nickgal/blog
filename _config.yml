@@ -1,4 +1,4 @@
-title:            Site Title
+title:            Nick Gal
 description:      Describe your website here.
 disqus_shortname: hpstrtheme
 reading_time:     true
@@ -9,14 +9,14 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Nick Gal
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          nickgal@me.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
-  github:
+  github:         nickgal
   stackexchange:
   linkedin:
   instagram:
