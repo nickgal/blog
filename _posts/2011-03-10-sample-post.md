@@ -99,3 +99,16 @@ Make any link standout more when applying the `.btn` class.
 <div markdown="0"><a href="#" class="btn btn-warning">Warning Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-danger">Danger Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-info">Info Button</a></div>
+
+
+{% highlight elixir %}
+defmodule HelloPhoenix.PageController do
+  . . .
+  def index(conn, _params) do
+    conn
+    |> put_flash(:info, "Welcome to Phoenix, from flash info!")
+    |> put_flash(:error, "Let's pretend we have an error.")
+    |> render("index.html")
+  end
+end
+{% endhighlight %}
