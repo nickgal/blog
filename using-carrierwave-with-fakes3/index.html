@@ -5,25 +5,25 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Blog &#8211; Nick Gal</title>
-<meta name="description" content="Describe this nonsense.">
-<meta name="keywords" content="Jekyll, theme, themes, responsive, blog, modern">
+<title>Using Carrierwave With FakeS3 &#8211; Nick Gal</title>
+<meta name="description" content="Describe your website here.">
+<meta name="keywords" content="ruby, carrierwave, s3, fakes3">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Describe this nonsense.">
-<meta property="og:url" content="//nickgal.github.io/blog/index.html">
+<meta property="og:title" content="Using Carrierwave With FakeS3">
+<meta property="og:description" content="Describe your website here.">
+<meta property="og:url" content="//nickgal.github.io/blog/using-carrierwave-with-fakes3/">
 <meta property="og:site_name" content="Nick Gal">
 
 
 
 
 
-<link rel="canonical" href="//nickgal.github.io/blog/">
+<link rel="canonical" href="//nickgal.github.io/blog/using-carrierwave-with-fakes3/">
 <link href="//nickgal.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Nick Gal Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -59,7 +59,7 @@
 
 </head>
 
-<body id="post-index" class="feature">
+<body id="post" >
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
 <nav id="dl-menu" class="dl-menuwrapper" role="navigation">
@@ -103,49 +103,27 @@
 </nav><!-- /.dl-menuwrapper -->
 
 
-<div class="entry-header" style="height: 400px; z-index:1;">
-  <div class="image-credit">video source: <a href="http://coverr.co">coverr</a></div><!-- /.image-credit -->
-  <!-- <video autoplay  poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Sail-Away.jpg" loop>
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/webm/Sail-Away.webm" type="video/webm">
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Sail-Away.mp4" type="video/mp4">
-  </video> -->
-  <!-- <video autoplay  poster="https://s3-us-west-2.amazonaws.com/coverr/poster/birds.jpg" loop>
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/webm/birds.webm" type="video/webm">
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/birds.mp4" type="video/mp4">
-  </video> -->
-  <video autoplay  poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Surfers-Paradise.jpg" loop>
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/webm/Surfers-Paradise.webm" type="video/webm">
-    <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Surfers-Paradise.mp4" type="video/mp4">
-  </video>
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>Nick Gal</h1>
-      <h2>Blog</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+
 
 <div id="main" role="main">
-  
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2015-11-16T14:36:19-05:00"><a href="//nickgal.github.io/blog/using-carrierwave-with-fakes3/">November 16, 2015</a></time></span><span class="author vcard"><span class="fn"><a href="//nickgal.github.io/blog/about/" title="About Nick Gal">Nick Gal</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
         
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="//nickgal.github.io/blog/using-carrierwave-with-fakes3/" rel="bookmark" title="Using Carrierwave With FakeS3" itemprop="url">Using Carrierwave With FakeS3</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>Here’s a quick walkthrough for using  <a href="https://github.com/carrierwaveuploader/carrierwave">Carrierwave</a> with
+          <h1 class="entry-title"><a href="//nickgal.github.io/blog/using-carrierwave-with-fakes3/" rel="bookmark" title="Using Carrierwave With FakeS3">Using Carrierwave With FakeS3</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2015-11-16T14:36:19-05:00">November 16, 2015</time></span></h2>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </p><!-- /.entry-reading-time -->
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>Here’s a quick walkthrough for using  <a href="https://github.com/carrierwaveuploader/carrierwave">Carrierwave</a> with
 <a href="https://github.com/jubos/fake-s3">FakeS3</a>.</p>
 
 <p>We are going to use <code>fakes3.local</code> for the hostname, <code>3100</code> for the port and <code>my-bucket</code> for the s3 bucket name.</p>
@@ -181,27 +159,21 @@
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">fakes3 --root<span class="o">=</span>tmp/fakes3_root --port<span class="o">=</span><span class="m">3100</span> --hostname<span class="o">=</span>fakes3.local</code></pre></div>
 
 
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-
-<div class="pagination">
-  
-    Previous
-  
-  <ul class="inline-list">
-    <li>
-      
-        <span class="current-page">1</span>
-      
-    </li>
-    
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="//nickgal.github.io/blog/tags/#ruby" title="Pages tagged ruby" class="tag"><span class="term">ruby</span></a><a href="//nickgal.github.io/blog/tags/#carrierwave" title="Pages tagged carrierwave" class="tag"><span class="term">carrierwave</span></a><a href="//nickgal.github.io/blog/tags/#s3" title="Pages tagged s3" class="tag"><span class="term">s3</span></a><a href="//nickgal.github.io/blog/tags/#fakes3" title="Pages tagged fakes3" class="tag"><span class="term">fakes3</span></a></span>
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=//nickgal.github.io/blog/using-carrierwave-with-fakes3/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=//nickgal.github.io/blog/using-carrierwave-with-fakes3/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=//nickgal.github.io/blog/using-carrierwave-with-fakes3/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
-  
-    Next
-  
-</div><!-- /.pagination -->
-
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    
+  </article>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
@@ -217,6 +189,28 @@
 
 
 
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'hpstrtheme'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	        
 
 </body>
 </html>
