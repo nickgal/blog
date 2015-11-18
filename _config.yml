@@ -1,5 +1,5 @@
 title:            Nick Gal
-description:      Describe your website here.
+description:      Short write-ups of day to day challenges.
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
@@ -11,7 +11,7 @@ url: //nickgal.github.io/blog
 owner:
   name:           Nick Gal
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  bio:            "Web Developer, Gamer, Husband, and Father."
   email:          nickgal@me.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
