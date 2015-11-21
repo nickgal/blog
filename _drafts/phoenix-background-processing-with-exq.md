@@ -58,11 +58,11 @@ def application do
 end
 {% endhighlight %}
 
-Add Exq config (Note the host is a character list and not a string)
+Add Exq config
 {% highlight elixir %}
 # config/dev.exs
 config :exq,
-  host: '127.0.0.1',
+  host: "127.0.0.1",
   port: 6379,
   namespace: "exq"
 {% endhighlight %}
